@@ -157,13 +157,13 @@ header {
     header .link-w-icon.geo {
       position: relative; }
       header .link-w-icon.geo:before {
-        content: url("/assets/geo-icon.png");
+        content: url("../assets/geo-icon.png");
         left: 0;
         position: absolute; }
     header .link-w-icon.phone {
       position: relative; }
       header .link-w-icon.phone:before {
-        content: url("/assets/phone-icon.png");
+        content: url("../assets/phone-icon.png");
         left: 0;
         position: absolute; }
     header .link-w-icon[aria-expanded='true'] .burger span {
@@ -234,7 +234,7 @@ header {
     .footer .link-w-icon.geo {
       position: relative; }
       .footer .link-w-icon.geo:before {
-        content: url("/assets/geo-icon-w.png");
+        content: url("../assets/geo-icon-w.png");
         left: 0;
         top: 0;
         bottom: 0;
@@ -243,7 +243,7 @@ header {
     .footer .link-w-icon.phone {
       position: relative; }
       .footer .link-w-icon.phone:before {
-        content: url("/assets/phone-icon-w.png");
+        content: url("../assets/phone-icon-w.png");
         left: 0;
         top: 0;
         bottom: 0;
@@ -541,7 +541,7 @@ body {
               border-color: #8c8f98; }
 
 .opportunities {
-  background-image: url("/assets/opportunities-1.png"); }
+  background-image: url("../assets/opportunities-1.png"); }
   @media (min-width: 1200px) {
     .opportunities {
       min-height: 600px;
