@@ -12,7 +12,6 @@ $dirGroup.on('show.bs.collapse','.collapse', function() {
 var $oppGroup = $('.opportunities__row--tiles');
 $oppGroup.on('show.bs.collapse','.collapse', function() {
     $oppGroup.find('.collapse.show').collapse('hide');
-    console.log($(this))
     //todo change bg of block
 });
 //TODO незакрывающийся колаапс
