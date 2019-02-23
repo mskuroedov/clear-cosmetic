@@ -4,23 +4,34 @@ var $mainDSlider =$('.main-slider.desktop .owl-carousel');
 $mainDSlider.owlCarousel({
     items: 1,
     dots: false,
-    draggable:false
+    mouseDrag: false,
+    touchDrag: false,
+    loop:true
 });
 $mainDSlider.parent().find('.prev').on('click',function () {
-
-    //todo animation
-
+    $('.main-slider__container .owl-item.active .main-slider__item__desc').animate({
+        opacity: 0.25,
+        left: 300,
+    }, 330);
     setTimeout(function () {
-        $mainDSlider.trigger('prev.owl.carousel')
-    },300)
+        $mainDSlider.trigger('prev.owl.carousel', [800])
+    },100);
 });
 $mainDSlider.parent().find('.next').on('click',function () {
-
-    //todo animation
-
+    $('.main-slider__container .owl-item.active .main-slider__item__desc').animate({
+        opacity: 0.25,
+        left: -300,
+    }, 330);
     setTimeout(function () {
-        $mainDSlider.trigger('next.owl.carousel')
-    },300)
+        $mainDSlider.trigger('next.owl.carousel', [800])
+    },100)
+});
+
+$mainDSlider.on('translated.owl.carousel',function () {
+    $('.main-slider__container .owl-item .main-slider__item__desc').animate({
+        opacity: 1,
+        left: 0,
+    }, 1);
 });
 //END index head slider
 
