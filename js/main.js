@@ -43,13 +43,15 @@ $('.directions a[data-toggle="collapse"]').on('click',function(){
 var $oppGroup = $('.opportunities__row--tiles');
 $oppGroup.on('show.bs.collapse','.collapse', function() {
     $oppGroup.find('.collapse.show').collapse('hide');
-    //todo[done] change bg of block
-    $('.opportunities').attr('class','opportunities '+ $(this).attr('id'));
+    // $('.opportunities').attr('class','opportunities '+ $(this).attr('id'));
+    $('.opportunities__bg img.fadeIn').removeClass('fadeIn').addClass('fadeOut');
+    var control = $(this).attr('id');
+    $('[data-opp=' + control + ']').removeClass('fadeOut').addClass('fadeIn');
 });
 //fix not to toggle shown slide
 $('.opportunities a[data-toggle="collapse"]').on('click',function(){
     if($(this).attr('aria-expanded') === 'true'){
         return false
     }
-})
+});
 
