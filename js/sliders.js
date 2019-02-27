@@ -15,7 +15,7 @@ $mainDSlider.parent().find('.prev').on('click',function () {
     }, 330);
     setTimeout(function () {
         $mainDSlider.trigger('prev.owl.carousel', [800])
-    },100);
+    }, 200);
 });
 $mainDSlider.parent().find('.next').on('click',function () {
     $('.main-slider__container .owl-item.active .main-slider__item__desc').animate({
@@ -24,7 +24,7 @@ $mainDSlider.parent().find('.next').on('click',function () {
     }, 330);
     setTimeout(function () {
         $mainDSlider.trigger('next.owl.carousel', [800])
-    },100)
+    }, 200)
 });
 
 $mainDSlider.on('translated.owl.carousel',function () {
@@ -34,6 +34,21 @@ $mainDSlider.on('translated.owl.carousel',function () {
     }, 1);
 });
 //END index head slider
+//main mobile slider
+var $mainMobileSlider = $('.main-slider.mobile .owl-carousel');
+$mainMobileSlider.owlCarousel({
+    items: 1,
+    dots: false,
+    loop: true
+});
+$mainMobileSlider.parent().find('.prev').on('click', function () {
+    $mainMobileSlider.trigger('prev.owl.carousel')
+});
+$mainDSlider.parent().find('.next').on('click', function () {
+    $mainMobileSlider.trigger('next.owl.carousel', [800])
+
+});
+
 
 //blog slider
 var $blogSlider = $('.blog-slider .owl-carousel');
@@ -41,7 +56,15 @@ $blogSlider.owlCarousel({
     items:3,
     dots:true,
     dotsContainer:$('[s-control="blog"] .slider__nav__container'),
-    dotsEach:3
+    dotsEach: 3,
+    responsive: {
+        0: {
+            items: 1,
+        },
+        1200: {
+            items: 3,
+        }
+    }
 });
 
 
@@ -59,7 +82,15 @@ $newsSlider.owlCarousel({
     items:3,
     dots:true,
     dotsContainer:$('[s-control="news"] .slider__nav__container'),
-    // dotsEach:3
+    dotsEach: 3,
+    responsive: {
+        0: {
+            items: 1,
+        },
+        1200: {
+            items: 3,
+        }
+    }
 });
 
 $('[s-control="news"] .prev').on('click',function () {
@@ -108,6 +139,16 @@ $partnersSlider.owlCarousel({
     loop:true,
     dotsEach:3,
     dotsContainer:$('[s-control="partners"] .slider__nav__container'),
+
+    responsive: {
+        0: {
+            items: 3,
+            margin: 30
+        },
+        1200: {
+            items: 8,
+        }
+    }
 });
 
 $('[s-control="partners"] .prev').on('click',function () {

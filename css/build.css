@@ -19,6 +19,11 @@ button {
   transition: all .2s; }
   .btn-brown:hover {
     background-color: #78797c; }
+  @media (max-width: 1199px) {
+    .btn-brown {
+      padding: 12px 21px 11px;
+      font-size: 11px;
+      letter-spacing: 1.4px; } }
 
 .btn-white {
   padding: 12px 23px 11px;
@@ -96,6 +101,9 @@ button {
 body {
   position: relative;
   padding-top: 128px; }
+  @media (max-width: 1199px) {
+    body {
+      padding-top: 45px; } }
 
 header {
   position: absolute;
@@ -112,6 +120,9 @@ header {
     display: flex;
     height: 56px;
     align-items: center; }
+    @media (max-width: 1199px) {
+      header .header-content {
+        height: 45px; } }
     header .header-content.h-71 {
       height: 71px; }
     header .header-content .logo {
@@ -125,6 +136,12 @@ header {
         top: 0;
         transform: translateY(-23%);
         z-index: 50; }
+      @media (max-width: 1199px) {
+        header .header-content .logo {
+          width: 84px;
+          margin-right: 19px; }
+          header .header-content .logo img {
+            transform: translateY(33%); } }
     header .header-content .nav-links a {
       height: 100%;
       display: inline-block;
@@ -145,6 +162,19 @@ header {
       margin-left: 15px; }
     header .header-content .social-links {
       margin-left: 30px; }
+    header .header-content .burger {
+      display: block;
+      width: 18px;
+      height: 14px;
+      margin-left: 26px; }
+      header .header-content .burger span {
+        width: 100%;
+        height: 2px;
+        display: block;
+        background: #b3a093;
+        margin-bottom: 4px; }
+        header .header-content .burger span:last-of-type {
+          margin-bottom: 0; }
   header .link-w-icon {
     font-size: 12px;
     font-family: "Proxima Nova Rg";
@@ -188,7 +218,14 @@ header {
       header .link-w-icon.phone:before {
         content: url("../assets/phone-icon.png");
         left: 0;
-        position: absolute; }
+        position: absolute;
+        height: 13px;
+        top: 0;
+        bottom: 0;
+        margin: auto; }
+      @media (max-width: 1199px) {
+        header .link-w-icon.phone {
+          letter-spacing: 0.9px; } }
     header .link-w-icon[aria-expanded='true'] .burger span {
       width: 14px !important; }
   header .sub-menu .collapse, header .sub-menu .collapsing {
@@ -448,6 +485,28 @@ body {
         font-size: 13px;
         font-weight: 100;
         letter-spacing: 2px; } }
+.main-slider.mobile .item {
+  position: relative; }
+  .main-slider.mobile .item .text {
+    position: absolute;
+    left: 15px;
+    bottom: 44px; }
+    .main-slider.mobile .item .text div:nth-child(1) {
+      font-size: 89px;
+      font-family: "Helvetica Neue";
+      color: white;
+      text-transform: uppercase;
+      line-height: .9;
+      letter-spacing: 10px; }
+    .main-slider.mobile .item .text div:nth-child(2) {
+      font-size: 23.383px;
+      font-family: "Helvetica Neue";
+      color: white;
+      text-transform: uppercase;
+      line-height: 1.2;
+      margin-bottom: 15px;
+      font-weight: 300;
+      letter-spacing: 3.3px; }
 
 .directions {
   padding-top: 70px;
@@ -878,7 +937,7 @@ body {
     right: 0;
     opacity: 1; }
   100% {
-    right: -50%;
+    right: -100%;
     opacity: 0; } }
 .fadeIn {
   position: relative;
@@ -892,11 +951,21 @@ body {
   padding-top: 45px;
   padding-bottom: 45px;
   background: #505258; }
+  @media (max-width: 1200px) {
+    .subscribe {
+      padding-top: 30px;
+      padding-bottom: 30px; } }
   .subscribe .split {
     display: block;
     width: 1px;
     background: #73757b;
     height: 111px; }
+    @media (max-width: 1200px) {
+      .subscribe .split {
+        display: none; } }
   .subscribe .btn-gray {
     min-width: 297px;
-    padding: 27px 39px; }
+    padding: 27px 39px;
+    margin-bottom: 30px; }
+    .subscribe .btn-gray:last-of-type {
+      margin-bottom: 0; }

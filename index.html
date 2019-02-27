@@ -24,14 +24,17 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-12">
-                            <div class="header-content justify-content-end">
-                                <a class="link-w-icon geo mr-3">
+                            <div class="header-content justify-content-lg-end">
+                                <a href="#" class="logo d-lg-none">
+                                    <img src="./assets/logo.png" alt="">
+                                </a>
+                                <a class="link-w-icon geo mr-3 d-none d-lg-block">
                                     г. Нижневартовск, ул. Ленина, 28
                                 </a>
-                                <a href="#" class="link-w-icon phone">
+                                <a href="#" class="link-w-icon phone ml-auto ml-lg-0">
                                     +7 (3466) 47 00 57
                                 </a>
-                                <div class="social-links">
+                                <div class="social-links d-none d-lg-flex">
                                     <a href="#">
                                         <i class="fab fa-vk"></i>
                                     </a>
@@ -46,12 +49,17 @@
                                         <i class="fab fa-odnoklassniki"></i>
                                     </a>
                                 </div>
+                                <a href="#" class=" burger d-lg-none">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="split"></div>
-                <div class="container">
+                <div class="split d-none d-lg-block"></div>
+                <div class="container d-none d-lg-block">
                     <div class="row">
                         <div class="col-12">
                             <div class="header-content h-71">
@@ -428,12 +436,64 @@
         </div>
     </div>
 </section>
-<section class="main-slider mobile"></section>
+<section class="main-slider mobile">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 px-0">
+                <div class="owl-carousel owl-theme">
+                    <div class="item">
+                        <img src="./assets/mobile-main-slider.png" alt="">
+                        <div class="text">
+                            <div>Clear</div>
+                            <div>Antiage clinic</div>
+                            <div>
+                                <button class="btn-brown">Узнать больше</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="./assets/mobile-main-slider.png" alt="">
+                        <div class="text">
+                            <div>Clear</div>
+                            <div>Antiage clinic</div>
+                            <div>
+                                <button class="btn-brown">Узнать больше</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="./assets/mobile-main-slider.png" alt="">
+                        <div class="text">
+                            <div>Clear</div>
+                            <div>Antiage clinic</div>
+                            <div>
+                                <button class="btn-brown">Узнать больше</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="./assets/mobile-main-slider.png" alt="">
+                        <div class="text">
+                            <div>Clear</div>
+                            <div>Antiage clinic</div>
+                            <div>
+                                <button class="btn-brown">Узнать больше</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+
+            </div>
+        </div>
+    </div>
+</section>
 
 <section class="directions">
     <div class="container">
         <div class="row" id="directionBlocks">
-            <div class="col-4">
+            <div class="col-12 col-lg-4">
                 <div class="directions__link">
                     <a href="#" role="button" data-target="#direction1" data-toggle="collapse" aria-expanded="true"><span>косметология</span></a>
                 </div>
@@ -450,7 +510,7 @@
                     <a href="#" role="button" data-target="#direction5" data-toggle="collapse" aria-expanded="false"><span>дермотология</span></a>
                 </div>
             </div>
-            <div class="col-8" >
+            <div class="col-8 d-none d-lg-block" >
                 <div class="collapse show" id="direction1" data-parent="#directionBlocks">
                     <div class="directions__block">
                         <div class="directions__block__promo">
@@ -1003,14 +1063,14 @@
             <div class="col-12 order-0 col-lg-auto">
                 <div class="slider__title">Партнеры</div>
             </div>
-            <div class="col-12 order-1 order-lg-2 col-lg-auto ml-auto">
+            <div class="col-12 order-2 order-lg-2 col-lg-auto ml-auto">
                 <div class="slider__nav" s-control="partners">
                     <button class="prev"></button>
                     <div class="slider__nav__container"></div>
                     <button class="next"></button>
                 </div>
             </div>
-            <div class="col-12 order-2 order-lg-3 partners-slider">
+            <div class="col-12 order-1 order-lg-3 partners-slider">
                 <div class="owl-carousel owl-theme align-center">
                     <a href="#" class="partner-slide">
                         <img src="./assets/partners/partner-1.png" alt="">
@@ -1052,7 +1112,7 @@
     <div class="container">
         <div class="row justify-content-around align-items-center">
             <div class="col-auto text-center">
-                <button class="btn-gray"><span>записаться на прием</span></button>
+                <button class="btn-gray mb-4 mb-lg-0"><span>записаться на прием</span></button>
             </div>
             <div class="split"></div>
             <div class="col-auto text-center">
