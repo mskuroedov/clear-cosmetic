@@ -72,18 +72,23 @@ $('[s-control="news"] .next').on('click',function () {
 //toggle menu of blog & news
 $('[s-group="one"]').on('click',function () {
     if(!$(this).hasClass('active')){
+        //переключение активного заголовка
         $(this).parent().find('.active').removeClass('active');
 
         $(this).addClass('active');
         var src = $(this).attr('s-src');
+
         if(src == 'blog'){
-            $('.blog-slider').show();
-            $('.news-slider').hide();
+            $('.news-slider').removeClass('fadeIn').addClass('fadeOut');
+            $('.blog-slider').removeClass('fadeOut').addClass('fadeIn');
+
             $('[s-control="blog"]').show();
             $('[s-control="news"]').hide();
         }else{
-            $('.news-slider').show();
-            $('.blog-slider').hide();
+            $('.blog-slider').removeClass('fadeIn').addClass('fadeOut');
+            $('.news-slider').removeClass('fadeOut').addClass('fadeIn');
+            // $('.news-slider').show();
+            // $('.blog-slider').hide();
             $('[s-control="news"]').show();
             $('[s-control="blog"]').hide();
         }

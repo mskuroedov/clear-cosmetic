@@ -713,7 +713,8 @@ body {
     opacity: 0; } }
 .slider {
   padding-top: 119px;
-  padding-bottom: 102px; }
+  padding-bottom: 102px;
+  overflow: hidden; }
   .slider__title {
     font-size: 28px;
     font-family: "Helvetica Neue";
@@ -864,6 +865,29 @@ body {
     bottom: -200%; }
   100% {
     bottom: 0; } }
+@keyframes fadeInFromLeft {
+  0% {
+    left: -50%;
+    opacity: 0;
+    position: relative; }
+  100% {
+    left: 0;
+    opacity: 1; } }
+@keyframes fadeOutRight {
+  0% {
+    right: 0;
+    opacity: 1; }
+  100% {
+    right: -50%;
+    opacity: 0; } }
+.fadeIn {
+  position: relative;
+  animation: fadeInFromLeft .5s forwards; }
+
+.fadeOut {
+  position: absolute;
+  animation: fadeOutRight .5s forwards; }
+
 .subscribe {
   padding-top: 45px;
   padding-bottom: 45px;
