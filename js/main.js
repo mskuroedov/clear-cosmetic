@@ -20,7 +20,7 @@ var $dirGroup = $('#directionBlocks');
 //     $dirGroup.find('.collapse.show').collapse('hide');
 // });
 //fix not to toggle shown slide
-$('.directions a[data-toggle="collapse"]').on('click',function(){
+$('.directions #directionBlocks a[data-toggle="collapse"]').on('click',function(){
     if($(this).attr('aria-expanded') === 'true' || ! $dirGroup.find('.collapsing')){
         return false
     }

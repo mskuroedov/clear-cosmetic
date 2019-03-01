@@ -38,15 +38,18 @@ $mainDSlider.on('translated.owl.carousel',function () {
 var $mainMobileSlider = $('.main-slider.mobile .owl-carousel');
 $mainMobileSlider.owlCarousel({
     items: 1,
-    dots: false,
-    loop: true
+    dots: true,
+    loop: true,
+    dotsEach: 1,
+    slideBy:1,
+    dotsContainer:$('.main-slider.mobile .slider__nav__container')
+
 });
-$mainMobileSlider.parent().find('.prev').on('click', function () {
+$mainMobileSlider.parent().next().find('.prev').on('click', function () {
     $mainMobileSlider.trigger('prev.owl.carousel')
 });
-$mainDSlider.parent().find('.next').on('click', function () {
-    $mainMobileSlider.trigger('next.owl.carousel', [800])
-
+$mainMobileSlider.parent().next().find('.next').on('click', function () {
+    $mainMobileSlider.trigger('next.owl.carousel')
 });
 
 
@@ -55,13 +58,17 @@ var $blogSlider = $('.blog-slider .owl-carousel');
 $blogSlider.owlCarousel({
     items:3,
     dots:true,
-    dotsContainer:$('[s-control="blog"] .slider__nav__container'),
-    dotsEach: 3,
     responsive: {
         0: {
+            dotsContainer:$('.d-lg-none [s-control="blog"] .slider__nav__container'),
+            slideBy:1,
+            dotsEach: 3,
             items: 1,
         },
         1200: {
+            dotsContainer:$('.d-lg-block [s-control="blog"] .slider__nav__container'),
+            slideBy:3,
+            dotsEach: 3,
             items: 3,
         }
     }
@@ -81,15 +88,20 @@ var $newsSlider = $('.news-slider .owl-carousel');
 $newsSlider.owlCarousel({
     items:3,
     dots:true,
-    dotsContainer:$('[s-control="news"] .slider__nav__container'),
     dotsEach: 3,
+    slideBy:3,
     responsive: {
         0: {
             items: 1,
+            dotsContainer:$('.d-lg-none [s-control="news"] .slider__nav__container'),
+            slideBy:1,
+            dotsEach: 3,
         },
         1200: {
-            items: 3,
-        }
+            dotsContainer:$('.d-lg-block [s-control="news"] .slider__nav__container'),
+            slideBy:3,
+            dotsEach: 3,
+            items: 3, }
     }
 });
 
@@ -138,6 +150,7 @@ $partnersSlider.owlCarousel({
     items:8,
     loop:true,
     dotsEach:3,
+    slideBy:3,
     dotsContainer:$('[s-control="partners"] .slider__nav__container'),
 
     responsive: {
