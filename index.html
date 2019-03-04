@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="assets/Helvetica/stylesheet.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
           integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/build.css">
 </head>
 <body>
@@ -85,7 +85,7 @@
                                     <a href="#" aria-expanded="false" data-toggle="collapse" data-target="#probMenu">проблемы</a>
                                     <a href="#" aria-expanded="false" data-toggle="collapse"
                                        data-target="#moreMenu">еще</a>
-                                    <button class="btn-brown" data-toggle="modal" data-target="#">Записаться</button>
+                                    <button class="btn-brown" data-toggle="modal" data-target="#appModal">Записаться</button>
                                 </div>
 
                             </div>
@@ -1270,7 +1270,7 @@
     <div class="container">
         <div class="row justify-content-around align-items-center">
             <div class="col-auto text-center">
-                <button class="btn-gray mb-4 mb-lg-0"><span>записаться на прием</span></button>
+                <button class="btn-gray mb-4 mb-lg-0" data-toggle="modal" data-target="#appModal"><span>записаться на прием</span></button>
             </div>
             <div class="split"></div>
             <div class="col-auto text-center">
@@ -1344,13 +1344,108 @@
         </div>
     </div>
 </footer>
+
+
+<div class="modal fade custom-modal" tabindex="-1" role="dialog" id="appModal">
+    <div class="modal-dialog " role="document">
+        <div class="modal-content">
+            <div class="">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <img src="./assets/cross.png" alt="">
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="title">
+                    ЗАПИСАТЬСЯ НА ПРОЦЕДУРУ
+                </div>
+                <div class="subtitle">
+                    Заполните форму и мы свяжемся с вами в ближайшее время.
+                </div>
+
+                <div class="form-block">
+                    <label for="app1">Процедура</label>
+                   <div class="input-block">
+                       <select class="js-example-basic-single" name="state" id="app1">
+                           <option value="a1">Косметология</option>
+                           <option value="a2">Косметология</option>
+                           <option value="a3">Косметология</option>
+                           <option value="a4">Косметология</option>
+                       </select>
+                       <div class="error-msg">Сообщение об ошибке</div>
+                   </div>
+                </div>
+                <div class="form-block">
+
+                    <label for="app2">Ваше имя</label>
+                    <div class="input-block">
+                        <input type="text" id="app2" required >
+                        <div class="error-msg">Сообщение об ошибке</div>
+                    </div>
+                </div>
+                <div class="form-block">
+                    <label for="app3">Номер телефона</label>
+                   <div class="input-block">
+                        <input type="text" id="app3" required data-inputmask="'mask': '+7 999 999-99-99'">
+                       <div class="error-msg">Сообщение об ошибке</div>
+                   </div>
+                </div>
+                <div class="form-block">
+                    <label for="app4">Сообщение</label>
+                   <div class="input-block">
+                        <input type="text" required id="app4">
+                       <div class="error-msg">Сообщение об ошибке</div>
+                   </div>
+                </div>
+
+                <div class="actions">
+                    <div class="custom-checkbox">
+                        <input type="checkbox" id="ch1">
+                        <label for="ch1">Согласен на обработку персональных данных</label>
+                    </div>
+                    <button class="btn-brown" data-dismiss="modal" data-toggle="modal" data-target="#appModalSuccess">Записаться</button>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="modal fade custom-modal" tabindex="-1" role="dialog" id="appModalSuccess">
+    <div class="modal-dialog " role="document">
+        <div class="modal-content">
+            <div class="">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <img src="./assets/cross.png" alt="">
+                </button>
+            </div>
+            <div class="modal-body success-body">
+                <div class="tick">
+                    <img src="./assets/big-tick.png" alt="">
+                </div>
+                <div class="title">
+                    спасибо, ваша заявка принята
+                </div>
+                <div class="subtitle">
+                    Наш менеджер перезвонит Вам в течение 15 минут.
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
 <script src="js/jquery-3.2.1.min.js"></script>
 <script src="js/bootstrap.bundle.min.js"></script>
 <script src="js/owl.carousel.min.js"></script>
+<script src="js/jquery.inputmask.bundle.min.js"></script>
 <script src="js/main.js"></script>
 <script src="js/sliders.js"></script>
-<script>
+<script src="js/inputmask-scripts.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
 
+<script>
+    $(document).ready(function() {
+        $('.js-example-basic-single').select2();
+    });
 </script>
 </body>
 </html>
