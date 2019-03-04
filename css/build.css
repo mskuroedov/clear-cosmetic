@@ -628,6 +628,7 @@ body {
   .load-more__btn {
     display: flex;
     align-items: center;
+    cursor: pointer;
     margin-right: 30px;
     margin-left: 30px;
     border: 2px solid #bba294;
@@ -639,7 +640,7 @@ body {
     text-transform: uppercase;
     transition: all .2s;
     letter-spacing: 3px;
-    padding: 18px 20px 11px 20px; }
+    padding: 13px 20px 11px 20px; }
     .load-more__btn i {
       font-size: 20px;
       margin-right: 16px; }
@@ -1686,3 +1687,74 @@ body {
   .feedback__new-item .btn-black {
     width: 100%;
     font-size: 12px; }
+
+.blog__tile {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 40px; }
+  .blog__tile img {
+    width: 100%;
+    max-width: 100%; }
+  .blog__tile .content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 20px; }
+    @media (min-width: 1440px) {
+      .blog__tile .content {
+        padding-left: 34px;
+        padding-right: 34px;
+        padding-bottom: 30px; } }
+    .blog__tile .content:before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 300%;
+      transition: background .2s;
+      background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, #78797c 100%);
+      /* FF3.6-15 */
+      background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, #78797c 100%);
+      /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, #78797c 100%);
+      /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a6000000', endColorstr='#00000000', GradientType=0);
+      /* IE6-9 */ }
+    .blog__tile .content .sub-info {
+      position: relative;
+      font-size: 10px;
+      font-family: "Proxima Nova Rg";
+      color: #dec9b6;
+      text-transform: uppercase;
+      line-height: 1.2;
+      margin-bottom: 10px;
+      letter-spacing: 2px; }
+      @media (min-width: 1440px) {
+        .blog__tile .content .sub-info {
+          font-size: 11px;
+          letter-spacing: 2px; } }
+      .blog__tile .content .sub-info span {
+        margin-right: 16px; }
+    .blog__tile .content .title {
+      position: relative;
+      font-size: 23px;
+      font-family: "Proxima Nova Lt";
+      color: white;
+      line-height: 1.2;
+      min-height: 54px;
+      letter-spacing: 0.7px; }
+  .blog__tile:hover {
+    text-decoration: none; }
+    .blog__tile:hover .content:before {
+      animation: fadeFromBottom .2s;
+      background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, #bba294 100%);
+      /* FF3.6-15 */
+      background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, #bba294 100%);
+      /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, #bba294 100%);
+      /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */ }
