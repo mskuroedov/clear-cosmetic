@@ -24,7 +24,7 @@ $('.directions #directionBlocks a[data-toggle="collapse"]').on('click',function(
     if($(this).attr('aria-expanded') === 'true' || ! $dirGroup.find('.collapsing')){
         return false
     }
-})
+});
 
 // $('.directions a[data-toggle="collapse"]').on('click', function (event) {
 //

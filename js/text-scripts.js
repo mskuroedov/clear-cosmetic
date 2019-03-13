@@ -1,0 +1,169 @@
+var $prepareSlider = $('.prepare-slider .owl-carousel')
+$prepareSlider.owlCarousel({
+    items: 4,
+    dotsContainer: $('[s-control="prepare"] .slider__nav__container'),
+    margin:73,
+    responsive: {
+        0: {
+            items: 1,
+            slideBy: 1,
+            dotsEach: 1,
+        },
+        1200: {
+            items: 4,
+            slideBy: 4,
+            dotsEach: 4,
+        }
+    }
+});
+$('[s-control="prepare"] .prev').on('click',function () {
+    $prepareSlider.trigger('prev.owl.carousel');
+});
+$('[s-control="prepare"] .next').on('click',function () {
+    $prepareSlider.trigger('next.owl.carousel');
+});
+
+var $fbSlider = $('.feedback-slider .owl-carousel')
+$fbSlider.owlCarousel({
+    items: 4,
+    dotsContainer: $('[s-control="feedback"] .slider__nav__container'),
+    autoHeight:true,
+    margin:73,
+    responsive: {
+        0: {
+            items: 1,
+            slideBy: 1,
+            dotsEach: 1,
+        },
+        1200: {
+            items: 4,
+            slideBy: 4,
+            dotsEach: 4,
+        }
+    }
+});
+$('[s-control="feedback"] .prev').on('click',function () {
+    $fbSlider.trigger('prev.owl.carousel');
+});
+$('[s-control="feedback"] .next').on('click',function () {
+    $fbSlider.trigger('next.owl.carousel');
+});
+
+var $partnerSlider = $('.partners-slider .owl-carousel')
+$partnerSlider.owlCarousel({
+    dots:true,
+    margin:60,
+    items:8,
+    loop:true,
+    dotsEach:3,
+    slideBy:3,
+    dotsContainer:$('[s-control="partners"] .slider__nav__container'),
+    responsive: {
+        0: {
+            items: 3,
+            margin: 30
+        },
+        1200: {
+            items: 8,
+        }
+    }
+});
+
+$('[s-control="partners"] .prev').on('click',function () {
+    $partnerSlider.trigger('prev.owl.carousel');
+});
+$('[s-control="partners"] .next').on('click',function () {
+    $partnerSlider.trigger('next.owl.carousel');
+});
+
+
+var $medicsSlider = $('.medics .owl-carousel')
+$medicsSlider.owlCarousel({
+    dots:true,
+    margin:60,
+    items:4,
+    loop:true,
+    dotsEach:3,
+    slideBy:3,
+    dotsContainer:$('[s-control="medics"] .slider__nav__container'),
+    responsive: {
+        0: {
+            items: 1,
+            margin: 30
+        },
+        1200: {
+            items: 4,
+        }
+    }
+});
+$('[s-control="medics"] .prev').on('click',function () {
+    $medicsSlider.trigger('prev.owl.carousel');
+});
+$('[s-control="medics"] .next').on('click',function () {
+    $medicsSlider.trigger('next.owl.carousel');
+});
+
+var $eduSlider = $('.edu .owl-carousel');
+
+$eduSlider.owlCarousel({
+    dots:true,
+    margin:60,
+    items:4,
+    loop:true,
+    dotsEach:3,
+    slideBy:3,
+    dotsContainer:$('[s-control="edu"] .slider__nav__container'),
+    responsive: {
+        0: {
+            items: 1,
+            margin: 30
+        },
+        1200: {
+            items: 4,
+        }
+    }
+});
+$('[s-control="edu"] .prev').on('click',function () {
+    $eduSlider.trigger('prev.owl.carousel');
+});
+$('[s-control="edu"] .next').on('click',function () {
+    $eduSlider.trigger('next.owl.carousel');
+});
+
+var $procedSlider = $('.procedures-slider .owl-carousel')
+$procedSlider.owlCarousel({
+    dots:true,
+    margin:0,
+    loop:true,
+    dotsEach:3,
+    slideBy:3,
+    dotsContainer:$('[s-control="procedures"] .slider__nav__container'),
+    responsive: {
+        0: {
+            items: 1,
+            slideBy:1,
+            margin: 30
+        },
+        1200: {
+            items: 3,
+            slideBy:3,
+        }
+    }
+});
+$('[s-control="procedures"] .prev').on('click',function () {
+    $procedSlider.trigger('prev.owl.carousel');
+});
+$('[s-control="procedures"] .next').on('click',function () {
+    $procedSlider.trigger('next.owl.carousel');
+});
+
+$('.faq .d-none a[data-toggle="collapse"]').on('click',function(){
+    if($(this).attr('aria-expanded') === 'true' || ! $dirGroup.find('.collapsing')){
+        return false
+    }
+});
+$('.faq .d-lg-none a[data-toggle="collapse"]').on('click',function(){
+    if($(this).attr('aria-expanded') === 'true' || ! $dirGroup.find('.collapsing')){
+        return false
+    }
+});

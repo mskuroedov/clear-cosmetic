@@ -81,6 +81,25 @@ button {
     .btn-gray:hover:before {
       left: 0; }
 
+.btn-white-outline {
+  border: 1px solid white;
+  background-color: transparent;
+  padding: 29px 39px;
+  font-size: 14px;
+  font-family: "Proxima Nova Lt";
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1.2;
+  text-align: center;
+  cursor: pointer;
+  letter-spacing: 2.6px;
+  transition: all .2s; }
+  .btn-white-outline:hover {
+    border-color: #bba294;
+    background: #bba294;
+    color: white; }
+
 .btn-black {
   padding: 20px 23px 18px;
   background-color: #3d3e41;
@@ -107,7 +126,8 @@ button {
     text-decoration: underline;
     text-transform: uppercase;
     margin-right: 26px;
-    position: relative; }
+    position: relative;
+    letter-spacing: 0.6px; }
     .breadcrumbs__item:after {
       content: '';
       height: 5px;
@@ -123,7 +143,8 @@ button {
     .breadcrumbs__item:last-of-type {
       font-weight: 600;
       pointer-events: none;
-      text-decoration: none; }
+      text-decoration: none;
+      letter-spacing: 1px; }
       .breadcrumbs__item:last-of-type:after {
         display: none; }
     .breadcrumbs__item:hover {
@@ -1058,6 +1079,34 @@ body {
           .directions__block__row .item .sale_link:hover:after {
             border-color: #8c8f98; }
 
+.sale_link {
+  position: relative;
+  font-size: 10px;
+  font-family: "Proxima Nova Rg";
+  color: #bfa799;
+  line-height: 1.286;
+  text-align: right;
+  padding-right: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase; }
+  .sale_link:after {
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-top: 1px solid #bfa799;
+    border-right: 1px solid #bfa799;
+    transform: rotate(45deg);
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto; }
+  .sale_link:hover {
+    color: #8c8f98;
+    text-decoration: none; }
+    .sale_link:hover:after {
+      border-color: #8c8f98; }
+
 .opportunities {
   transition: background .2s;
   position: relative; }
@@ -1345,6 +1394,107 @@ body {
     display: flex;
     align-items: center; }
 
+.img-text-slide img {
+  margin-bottom: 2rem; }
+.img-text-slide div {
+  font-size: 15px;
+  font-family: "Proxima Nova Lt";
+  color: #414349;
+  line-height: 1.556;
+  letter-spacing: .2px; }
+  @media (max-width: 1199px) {
+    .img-text-slide div {
+      font-size: 15px; } }
+  @media (min-width: 1440px) {
+    .img-text-slide div {
+      letter-spacing: .5px;
+      font-size: 18px; } }
+
+.feedback-slide.text .text {
+  font-size: 14px;
+  font-family: "Proxima Nova Lt";
+  color: #414349;
+  line-height: 1.286;
+  background: white;
+  letter-spacing: 0.6px;
+  padding: 18px 13px 17px 27px; }
+.feedback-slide.text a {
+  color: #bba294;
+  display: block;
+  margin-top: 21px;
+  font-size: 11px;
+  font-family: "Proxima Nova Lt";
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1.622;
+  text-align: left;
+  letter-spacing: 0.3px;
+  transition: all .2s; }
+  .feedback-slide.text a:hover {
+    color: #78797c;
+    text-decoration: none; }
+.feedback-slide.vid {
+  position: relative; }
+  .feedback-slide.vid video {
+    width: 100%;
+    max-width: 100%; }
+  .feedback-slide.vid button {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border-radius: 50%;
+    background-color: #bba294;
+    width: 105px;
+    height: 105px;
+    border: 0;
+    cursor: pointer;
+    transition: all .2s; }
+    .feedback-slide.vid button .triangle {
+      -webkit-clip-path: polygon(0 0, 0% 100%, 100% 50%);
+      clip-path: polygon(0 0, 0% 100%, 100% 50%);
+      background: white;
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 8px;
+      right: 0;
+      margin: auto; }
+    .feedback-slide.vid button:hover {
+      background: #78797c; }
+.feedback-slide.inst {
+  background: white; }
+  .feedback-slide.inst a {
+    display: block;
+    background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, white 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, white 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, white 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    color: #bba294;
+    padding-top: 90px;
+    width: 100%;
+    margin-top: -80px;
+    position: relative;
+    font-size: 11px;
+    font-family: "Proxima Nova Lt";
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1.622;
+    text-align: left;
+    letter-spacing: 0.3px;
+    padding-left: 27px;
+    padding-bottom: 17px;
+    transition: all .2s; }
+    .feedback-slide.inst a:hover {
+      color: #78797c;
+      text-decoration: none; }
+
 @keyframes fadeFromBottom {
   0% {
     bottom: -200%; }
@@ -1501,71 +1651,72 @@ body {
     @media (max-width: 1199px) {
       .specs__row {
         margin-bottom: 30px; } }
-  .specs__item {
-    margin-bottom: 24px;
-    display: block; }
-    .specs__item .photo-block {
+
+.specs__item {
+  margin-bottom: 24px;
+  display: block; }
+  .specs__item .photo-block {
+    position: relative;
+    margin-bottom: 18px;
+    overflow: hidden; }
+    .specs__item .photo-block img {
+      width: 100%;
+      max-width: 100%;
       position: relative;
-      margin-bottom: 18px;
-      overflow: hidden; }
-      .specs__item .photo-block img {
-        width: 100%;
-        max-width: 100%;
-        position: relative;
-        z-index: 5; }
-      .specs__item .photo-block .fade {
-        opacity: 1;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        z-index: 6;
-        background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, #78797c 100%);
-        /* FF3.6-15 */
-        background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, #78797c 100%);
-        /* Chrome10-25,Safari5.1-6 */
-        background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, #78797c 100%);
-        /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-        height: 47%;
-        width: 100%; }
-      .specs__item .photo-block .text {
-        position: absolute;
-        padding-left: 21px;
-        padding-right: 21px;
-        padding-bottom: 18px;
-        z-index: 7;
-        bottom: 0;
-        font-size: 18px;
-        font-family: "Proxima Nova Lt";
-        color: white;
-        line-height: 1.2;
-        text-align: left;
-        min-height: 60px; }
-        @media (min-width: 1440px) {
-          .specs__item .photo-block .text {
-            font-size: 20px; } }
-    .specs__item .description {
-      font-size: 8px;
-      font-family: "Proxima Nova Lt";
-      color: #414349;
-      text-transform: uppercase;
-      line-height: 1.6;
-      letter-spacing: 2.2px;
+      z-index: 5; }
+    .specs__item .photo-block .fade {
+      opacity: 1;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: 6;
+      background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, #78797c 100%);
+      /* FF3.6-15 */
+      background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, #78797c 100%);
+      /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, #78797c 100%);
+      /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      height: 47%;
+      width: 100%; }
+    .specs__item .photo-block .text {
+      position: absolute;
       padding-left: 21px;
       padding-right: 21px;
-      font-weight: bold; }
+      padding-bottom: 18px;
+      z-index: 7;
+      bottom: 0;
+      font-size: 18px;
+      font-family: "Proxima Nova Lt";
+      color: white;
+      line-height: 1.2;
+      text-align: left;
+      min-height: 60px; }
       @media (min-width: 1440px) {
-        .specs__item .description {
-          font-size: 10px; } }
-    .specs__item:hover {
-      text-decoration: none; }
-      .specs__item:hover .fade {
-        animation: fadeFromBottom .2s;
-        background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, #bba294 100%);
-        /* FF3.6-15 */
-        background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, #bba294 100%);
-        /* Chrome10-25,Safari5.1-6 */
-        background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, #bba294 100%);
-        /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */ }
+        .specs__item .photo-block .text {
+          font-size: 20px; } }
+  .specs__item .description {
+    font-size: 8px;
+    font-family: "Proxima Nova Lt";
+    color: #414349;
+    text-transform: uppercase;
+    line-height: 1.6;
+    letter-spacing: 2.2px;
+    padding-left: 21px;
+    padding-right: 21px;
+    font-weight: bold; }
+    @media (min-width: 1440px) {
+      .specs__item .description {
+        font-size: 10px; } }
+  .specs__item:hover {
+    text-decoration: none; }
+    .specs__item:hover .fade {
+      animation: fadeFromBottom .2s;
+      background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, #bba294 100%);
+      /* FF3.6-15 */
+      background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, #bba294 100%);
+      /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, #bba294 100%);
+      /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */ }
 
 .feedback__item {
   margin-bottom: 44px; }
@@ -1824,3 +1975,697 @@ body {
     padding: 17px 31px 14px;
     margin-top: 73px;
     font-size: 10px; }
+
+.text-section {
+  padding-top: 73px;
+  padding-bottom: 62px;
+  position: relative; }
+  @media (max-width: 1199px) {
+    .text-section {
+      padding-bottom: 30px; } }
+  .text-section.promo {
+    background: url("../assets/text-promo-bg.png");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding-bottom: 170px; }
+    .text-section.promo:after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 300px;
+      bottom: -1px;
+      left: 0;
+      background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, white 74%);
+      /* FF3.6-15 */
+      background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, white 74%);
+      /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, white 74%);
+      /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a6000000', endColorstr='#00000000', GradientType=0);
+      /* IE6-9 */ }
+    @media (max-width: 1199px) {
+      .text-section.promo {
+        background-position-x: 26%;
+        padding-bottom: 120px;
+        padding-top: 55px; }
+        .text-section.promo:after {
+          height: 110px; } }
+    .text-section.promo .breadcrumbs {
+      margin-bottom: 112px; }
+      @media (max-width: 1199px) {
+        .text-section.promo .breadcrumbs {
+          margin-bottom: 40px; } }
+    .text-section.promo .breadcrumbs__item {
+      color: white; }
+      .text-section.promo .breadcrumbs__item:after {
+        border-color: white; }
+    .text-section.promo .btn-white-outline {
+      padding: 18px 33px;
+      font-size: 12px;
+      position: relative;
+      z-index: 300; }
+    .text-section.promo .scroll-icon {
+      position: relative;
+      margin-top: 46px;
+      animation: scrollAnim 1s ease-in-out infinite; }
+  .text-section .promo__title {
+    font-size: 51px;
+    font-family: "Helvetica Neue";
+    color: white;
+    text-transform: uppercase;
+    line-height: 1.2;
+    text-align: left;
+    letter-spacing: 7px; }
+    @media (min-width: 1440px) {
+      .text-section .promo__title {
+        font-size: 71px; } }
+    @media (max-width: 1199px) {
+      .text-section .promo__title {
+        font-size: 31px;
+        margin-bottom: 36px; } }
+  .text-section .promo__text {
+    font-size: 18px;
+    font-family: "Proxima Nova Lt";
+    color: white;
+    font-weight: 300;
+    line-height: 1.556;
+    margin-bottom: 60px; }
+    @media (min-width: 1440px) {
+      .text-section .promo__text {
+        padding-right: 50px; } }
+    @media (max-width: 1199px) {
+      .text-section .promo__text {
+        font-size: 14px;
+        margin-bottom: 36px; } }
+    .text-section .promo__text .btn-white-outline {
+      position: relative;
+      z-index: 500; }
+  .text-section .promo__splitter {
+    height: 100%;
+    width: 1px;
+    background: white; }
+  .text-section.about {
+    padding-bottom: 35px; }
+    @media (min-width: 1200px) {
+      .text-section.about {
+        margin-top: -149px; } }
+  .text-section.price {
+    background-color: #e8ded9; }
+
+.text-title {
+  font-size: 30px;
+  font-family: "Helvetica Neue";
+  color: #414349;
+  text-transform: uppercase;
+  line-height: 1.2;
+  letter-spacing: 3px;
+  margin-bottom: 3.2rem; }
+  .text-title.big {
+    font-size: 50px; }
+  @media (max-width: 1199px) {
+    .text-title {
+      font-size: 20px;
+      letter-spacing: 1.2px;
+      margin-bottom: 30px; }
+      .text-title.big {
+        font-size: 30px;
+        margin-bottom: 30px; } }
+
+.text-p {
+  font-size: 18px;
+  font-family: "Proxima Nova Rg";
+  color: #414349;
+  line-height: 1.556;
+  letter-spacing: 0.3px;
+  margin-bottom: 1.8rem; }
+  @media (max-width: 1199px) {
+    .text-p {
+      font-size: 16px;
+      letter-spacing: 0.1px; } }
+
+.text-list {
+  padding-left: 0;
+  list-style: none;
+  margin-bottom: 0; }
+  .text-list li {
+    padding-left: 20px;
+    position: relative;
+    font-size: 18px;
+    font-family: "Proxima Nova Rg";
+    color: #414349;
+    line-height: 1.556; }
+    .text-list li:before {
+      content: '';
+      position: absolute;
+      left: 6px;
+      top: 10px;
+      width: 3px;
+      height: 3px;
+      background: #bba294; }
+
+.about-section {
+  margin-bottom: 100px; }
+  @media (max-width: 1199px) {
+    .about-section {
+      margin-bottom: 50px; }
+      .about-section.mb-70 {
+        margin-bottom: 2rem; } }
+  .about-section.mb-70 {
+    margin-bottom: 70px; }
+  .about-section iframe {
+    min-height: 320px;
+    width: 100%;
+    height: 100%; }
+
+.sticky-menu {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1020;
+  margin-bottom: 128px;
+  border-bottom: 1px solid rgba(187, 162, 148, 0.3);
+  padding-top: 30px;
+  background: white; }
+  @media (max-width: 1199px) {
+    .sticky-menu {
+      display: none; } }
+  .sticky-menu__item {
+    font-size: 24px;
+    font-family: "Helvetica Neue";
+    color: #8c8f98;
+    line-height: 1.2;
+    text-transform: uppercase;
+    padding-bottom: 17px;
+    letter-spacing: 2.2px;
+    margin-right: 50px;
+    display: inline-block;
+    transition: all .2s;
+    border-bottom: 2px solid transparent; }
+    .sticky-menu__item.active {
+      color: #bba294;
+      border-bottom-color: #bba294; }
+    .sticky-menu__item:hover {
+      text-decoration: none;
+      color: #8c8f98;
+      border-bottom-color: #8c8f98; }
+
+.price__row {
+  font-size: 18px;
+  font-family: "Proxima Nova Lt";
+  color: #414349;
+  line-height: 3.167;
+  display: flex;
+  text-align: center;
+  border-bottom: 1px solid #bba294; }
+  .price__row div {
+    text-align: center; }
+  .price__row.title {
+    color: #bba294;
+    font-size: 18px;
+    font-family: "Helvetica Neue";
+    text-transform: uppercase;
+    font-weight: 300;
+    line-height: 1.2;
+    letter-spacing: 2px;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #bba294; }
+    .price__row.title div:nth-of-type(1), .price__row.title div:nth-of-type(2) {
+      border-right: none;
+      font-size: 18px;
+      line-height: 1.2; }
+  .price__row div:nth-of-type(1) {
+    text-align: left;
+    flex-basis: 71.4%;
+    border-right: 1px solid #bba294; }
+  .price__row div:nth-of-type(2) {
+    border-right: 1px solid #bba294;
+    flex-basis: 10.4%;
+    font-size: 12px;
+    line-height: 4.8; }
+  .price__row div:nth-of-type(3) {
+    flex-basis: 18.2%; }
+  @media (max-width: 1199px) {
+    .price__row {
+      flex-wrap: wrap;
+      line-height: 1.5;
+      margin-bottom: 2rem; }
+      .price__row.title {
+        padding-bottom: 0; }
+        .price__row.title div:nth-of-type(1) {
+          text-align: left;
+          flex-basis: 100%;
+          border-right: none;
+          border-bottom: 1px solid #bba294;
+          padding-bottom: 1rem; }
+        .price__row.title div:nth-of-type(2) {
+          border-right: 1px solid #bba294;
+          flex-basis: 40%;
+          text-align: left;
+          line-height: 3; }
+        .price__row.title div:nth-of-type(3) {
+          flex-basis: 50%;
+          text-align: right;
+          margin-left: auto;
+          line-height: 3; }
+      .price__row div:nth-of-type(1) {
+        text-align: left;
+        flex-basis: 100%;
+        border-right: none;
+        border-bottom: 1px solid #bba294;
+        padding-bottom: 1rem; }
+      .price__row div:nth-of-type(2) {
+        border-right: 1px solid #bba294;
+        flex-basis: 40%;
+        font-size: 12px;
+        text-align: left;
+        line-height: 4.8; }
+      .price__row div:nth-of-type(3) {
+        flex-basis: 50%;
+        text-align: right;
+        margin-left: auto;
+        line-height: 3; } }
+
+.sale {
+  padding-bottom: 21px; }
+  .sale .sale_link {
+    margin-bottom: 48px;
+    display: block; }
+  .sale__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: url("../assets/sale-sm.png");
+    background-size: cover;
+    position: relative;
+    border: 1px solid #bba294;
+    height: 156px;
+    padding: 28px 50px 30px 25px;
+    overflow: hidden;
+    margin-bottom: 25px; }
+    .sale__item:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 270%;
+      height: 100%;
+      background: white;
+      z-index: 0;
+      transform: translateX(0%);
+      transition: all .5s;
+      -webkit-clip-path: polygon(0 0, 100% 0, 84% 100%, 0% 100%);
+      clip-path: polygon(0 0, 100% 0, 84% 100%, 0% 100%); }
+    .sale__item:hover {
+      text-decoration: none; }
+      .sale__item:hover:before {
+        transform: translateX(-150%); }
+      .sale__item:hover .text {
+        color: white; }
+    .sale__item .text {
+      position: relative;
+      display: block;
+      font-size: 17px;
+      font-family: "Helvetica Neue";
+      color: #414349;
+      text-transform: uppercase;
+      line-height: 1.333;
+      font-weight: 300;
+      letter-spacing: 2.5px;
+      transition: all .2s; }
+    .sale__item .label {
+      position: relative;
+      font-size: 8px;
+      font-family: "Proxima Nova Rg";
+      color: white;
+      text-transform: uppercase;
+      line-height: 1.2;
+      background: #bba294;
+      padding: 6px 7px 5px 10px;
+      letter-spacing: 1.7px; }
+      @media (max-width: 1199px) {
+        .sale__item .label {
+          font-size: 8px; } }
+    .sale__item--big {
+      display: block;
+      background: url("../assets/sale-big.png");
+      background-size: cover;
+      padding-left: 52px;
+      padding-top: 55px;
+      padding-bottom: 44px;
+      margin-bottom: 28px;
+      position: relative; }
+      @media (max-width: 1199px) {
+        .sale__item--big {
+          padding: 20px 16px; } }
+      .sale__item--big:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 60%;
+        z-index: 0;
+        background: -moz-linear-gradient(right, rgba(0, 0, 0, 0) 0%, #78797c 100%);
+        /* FF3.6-15 */
+        background: -webkit-linear-gradient(right, rgba(0, 0, 0, 0) 0%, #78797c 100%);
+        /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to left, rgba(0, 0, 0, 0) 0%, #78797c 100%);
+        /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */ }
+      .sale__item--big .label {
+        position: relative;
+        font-size: 12px;
+        font-family: "Proxima Nova Rg";
+        color: white;
+        text-transform: uppercase;
+        line-height: 1.2;
+        background: #bba294;
+        padding: 9px 12px 9px 13px;
+        letter-spacing: 2px; }
+        @media (max-width: 1199px) {
+          .sale__item--big .label {
+            font-size: 9px; } }
+      .sale__item--big .text {
+        position: relative;
+        font-size: 28px;
+        font-family: "Helvetica Neue";
+        color: white;
+        text-transform: uppercase;
+        line-height: 1.4;
+        font-weight: 300;
+        letter-spacing: 4.4px;
+        width: 40%;
+        display: block;
+        margin-bottom: 28px; }
+        @media (max-width: 1199px) {
+          .sale__item--big .text {
+            width: 100%;
+            font-size: 18px;
+            letter-spacing: 3.4px; } }
+      .sale__item--big:hover {
+        text-decoration: none; }
+
+.text-feedback {
+  background: #f3f3f3; }
+
+.faq {
+  background: #f3f3f3; }
+  .faq.vacantions {
+    background: white;
+    padding-top: 85px; }
+    @media (max-width: 1199px) {
+      .faq.vacantions {
+        padding-top: 45px; } }
+    .faq.vacantions .text-title {
+      margin-bottom: 73px; }
+  .faq .text-title {
+    margin-bottom: 2.2rem; }
+  .faq__link {
+    display: block;
+    position: relative;
+    padding: 18px 40px 18px 60px;
+    transition: all .2s; }
+    @media (max-width: 1199px) {
+      .faq__link {
+        padding-left: 40px; } }
+    .faq__link.invert:hover, .faq__link.invert[aria-expanded='true'] {
+      background: #f3f3f3;
+      text-decoration: none; }
+    .faq__link span {
+      font-size: 18px;
+      font-family: "Proxima Nova Lt";
+      color: #414349;
+      line-height: 1.333;
+      border-bottom: 1px dotted #bba294;
+      transition: all .2s; }
+      @media (max-width: 1199px) {
+        .faq__link span {
+          font-size: 15px; } }
+    .faq__link:before {
+      content: '';
+      position: absolute;
+      background: #bba294;
+      left: 20px;
+      top: 24px;
+      width: 13px;
+      height: 13px; }
+      @media (max-width: 1199px) {
+        .faq__link:before {
+          left: 13px;
+          top: 22px; } }
+    .faq__link:after {
+      content: '';
+      position: absolute;
+      top: 24px;
+      right: 30px;
+      height: 8px;
+      width: 8px;
+      border-top: 2px solid #bba294;
+      border-right: 2px solid #bba294;
+      transform: rotate(45deg);
+      opacity: 0;
+      transition: all .2s; }
+    .faq__link:hover, .faq__link[aria-expanded='true'] {
+      background: white;
+      text-decoration: none; }
+      .faq__link:hover:after, .faq__link[aria-expanded='true']:after {
+        opacity: 1; }
+    .faq__link[aria-expanded='true'] span {
+      border-bottom: transparent; }
+  .faq__answer {
+    padding-left: 30px;
+    font-size: 18px;
+    font-family: "Proxima Nova Lt";
+    color: #414349;
+    line-height: 1.556; }
+    @media (max-width: 1199px) {
+      .faq__answer {
+        font-size: 14px;
+        padding: 24px 15px; } }
+    .faq__answer .title {
+      font-size: 22px;
+      font-family: "Helvetica Neue";
+      color: #bba294;
+      text-transform: uppercase;
+      line-height: 1.2;
+      letter-spacing: 3.6px;
+      margin-bottom: 27px; }
+    .faq__answer .subtitle {
+      font-size: 12px;
+      font-family: "Proxima Nova Rg";
+      color: #bba294;
+      font-weight: bold;
+      text-transform: uppercase;
+      line-height: 1.6;
+      margin-bottom: 10px;
+      letter-spacing: 2.5px; }
+    .faq__answer .text {
+      font-size: 18px;
+      font-family: "Proxima Nova Lt";
+      color: #414349;
+      line-height: 1.556;
+      margin-bottom: 48px;
+      letter-spacing: .1px; }
+    .faq__answer .text-list li {
+      font-family: "Proxima Nova Lt"; }
+    .faq__answer .btn-black,
+    .faq__answer .btn-brown {
+      padding: 17px 31px 14px;
+      font-size: 10px;
+      margin-right: 30px; }
+      @media (max-width: 1199px) {
+        .faq__answer .btn-black,
+        .faq__answer .btn-brown {
+          width: 100%;
+          margin-bottom: 30px; } }
+  @media (max-width: 1199px) {
+    .faq__desktopblock {
+      display: none; } }
+
+.recomendations {
+  border: 1px solid #bba294;
+  padding: 61px 57px;
+  margin-bottom: 70px; }
+  @media (max-width: 1199px) {
+    .recomendations {
+      padding: 31px 27px; } }
+  .recomendations__link {
+    position: relative;
+    padding-left: 17px;
+    margin-bottom: 16px; }
+    @media (min-width: 1200px) {
+      .recomendations__link:last-of-type {
+        margin-bottom: 0; } }
+    .recomendations__link:before {
+      content: '';
+      background-color: #bba294;
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      left: 0;
+      top: 11px; }
+    .recomendations__link a {
+      border-bottom: 1px solid #414349;
+      font-size: 15px;
+      cursor: pointer;
+      font-family: "Proxima Nova Lt";
+      color: #414349; }
+      @media (min-width: 1440px) {
+        .recomendations__link a {
+          font-size: 18px; } }
+      .recomendations__link a:hover {
+        text-decoration: none;
+        color: #bba294;
+        border-bottom-color: #bba294; }
+
+.medics-row {
+  margin-bottom: 4.2rem; }
+  @media (max-width: 1199px) {
+    .medics-row {
+      margin-bottom: 2rem; } }
+
+.medic-description {
+  display: flex;
+  flex-direction: column;
+  height: 100%; }
+  .medic-description .name {
+    font-size: 48px;
+    font-family: "Helvetica Neue";
+    color: #414349;
+    text-transform: uppercase;
+    line-height: 1.2;
+    text-align: left;
+    letter-spacing: 4.8px;
+    margin-bottom: 30px; }
+    @media (max-width: 1199px) {
+      .medic-description .name {
+        font-size: 28px;
+        letter-spacing: 2px; } }
+  .medic-description .text {
+    font-size: 18px;
+    font-family: "Proxima Nova Lt";
+    color: #414349;
+    line-height: 1.556;
+    margin-bottom: 48px;
+    letter-spacing: .1px; }
+  .medic-description .title {
+    font-size: 12px;
+    font-family: "Proxima Nova Rg";
+    color: #bba294;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    letter-spacing: 2.5px; }
+  .medic-description .btn-black {
+    padding: 17px 31px 14px;
+    font-size: 10px; }
+    @media (max-width: 1199px) {
+      .medic-description .btn-black {
+        width: 100%; } }
+
+.education {
+  background: #f3f3f3; }
+  .education .text-title {
+    margin-bottom: 2.5rem; }
+  .education__block {
+    margin-bottom: 78px; }
+    .education__block .item {
+      margin-bottom: 25px; }
+      .education__block .item .num {
+        font-size: 24px;
+        font-family: "Helvetica Neue";
+        color: #bba294;
+        text-transform: uppercase;
+        line-height: 1.2;
+        margin-right: 39px;
+        letter-spacing: 2.1px; }
+      .education__block .item .text {
+        font-size: 18px;
+        font-family: "Proxima Nova Lt";
+        color: #414349;
+        line-height: 1.556; }
+        @media (max-width: 1199px) {
+          .education__block .item .text {
+            display: block; } }
+      .education__block .item:last-of-type {
+        margin-bottom: 0; }
+
+.procedures {
+  background: #f3f3f3; }
+
+.share {
+  padding-bottom: 144px; }
+  .share__block {
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid #bba294;
+    flex-wrap: wrap;
+    padding-top: 35px;
+    margin-bottom: 135px; }
+    .share__block .text {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 12px;
+      font-family: "Proxima Nova Rg";
+      color: #bba294;
+      font-weight: bold;
+      letter-spacing: 4px;
+      text-transform: uppercase; }
+    .share__block .link {
+      margin-right: 5px;
+      display: block;
+      width: 40px;
+      height: 40px;
+      background: #bba294;
+      border-radius: 50%;
+      transition: all .2s;
+      position: relative;
+      text-align: center;
+      font-size: 1.3rem; }
+      .share__block .link i {
+        line-height: 2;
+        color: white; }
+      .share__block .link:last-of-type {
+        margin-right: 0; }
+      .share__block .link:hover {
+        text-decoration: none;
+        background: #d7c9c0; }
+  .share .text-title {
+    letter-spacing: 5px;
+    margin-bottom: 2rem; }
+  .share .link-brown {
+    padding-left: 28px;
+    position: relative;
+    font-size: 18px;
+    font-family: "Proxima Nova Rg";
+    color: #bba294;
+    font-weight: bold;
+    line-height: 2; }
+    @media (max-width: 1199px) {
+      .share .link-brown {
+        font-size: 13px; } }
+    .share .link-brown span {
+      border-bottom: 1px solid #bba294; }
+    .share .link-brown:before {
+      content: '';
+      background-color: #383838;
+      position: absolute;
+      width: 3px;
+      height: 3px;
+      left: 2px;
+      top: 9px; }
+    .share .link-brown:hover {
+      color: #78797c;
+      text-decoration: none; }
+      .share .link-brown:hover span {
+        border-bottom-color: #78797c; }
+
+@keyframes scrollAnim {
+  0% {
+    top: 0;
+    opacity: 1; }
+  100% {
+    top: 20px;
+    opacity: 0; } }

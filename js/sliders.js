@@ -101,7 +101,8 @@ $newsSlider.owlCarousel({
             dotsContainer:$('.d-lg-block [s-control="news"] .slider__nav__container'),
             slideBy:3,
             dotsEach: 3,
-            items: 3, }
+            items: 3,
+        }
     }
 });
 
