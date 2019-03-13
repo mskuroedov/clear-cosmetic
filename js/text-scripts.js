@@ -167,3 +167,37 @@ $('.faq .d-lg-none a[data-toggle="collapse"]').on('click',function(){
         return false
     }
 });
+
+
+//scrolling and sticky menu scripts
+
+$('.sticky-menu__item').on('click', function (e) {
+    e.preventDefault();
+    let el = document.querySelector(e.target.attributes.href.value)
+    let offset = $(e.target.attributes.href.value).offset().top;
+    window.scroll({
+        top: offset - 120,
+        left: 0,
+        behavior: 'smooth'
+    });
+});
+
+
+var section = document.querySelectorAll(".about-section");
+var sections = {};
+var i = 0;
+
+Array.prototype.forEach.call(section, function (e) {
+    sections[e.id] = $(e).offset().top - 130;
+});
+
+window.onscroll = function () {
+    var scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
+
+    for (i in sections) {
+        if (sections[i] <= scrollPosition) {
+            document.querySelector('.sticky-menu .active').setAttribute('class', 'sticky-menu__item ');
+            document.querySelector('.sticky-menu a[href*=' + i + ']').setAttribute('class', 'sticky-menu__item active');
+        }
+    }
+};
