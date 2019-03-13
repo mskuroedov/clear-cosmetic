@@ -504,6 +504,9 @@ header {
       max-height: 100vh;
       overflow: scroll;
       transition: all .3s; }
+      @media (min-width: 414px) {
+        header .mobile-menu__container {
+          padding-bottom: 80px; } }
       header .mobile-menu__container .item {
         font-size: 19px;
         font-family: "Helvetica Neue";
