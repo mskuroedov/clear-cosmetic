@@ -546,7 +546,9 @@ header {
             color: #78797c; }
 
 .mobile-menu-opened {
-  overflow: hidden; }
+  overflow-y: hidden;
+  position: fixed;
+  width: 100vw; }
 
 .footer {
   background: #78797c;
