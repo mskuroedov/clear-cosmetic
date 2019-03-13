@@ -466,6 +466,87 @@ header {
         line-height: 1.2;
         display: block;
         padding: 0; }
+  header .mobile-menu {
+    position: absolute;
+    width: 100%;
+    z-index: 200;
+    height: 100vh;
+    display: none;
+    top: 0; }
+    header .mobile-menu.active {
+      display: block;
+      left: 0;
+      top: 0; }
+      header .mobile-menu.active .bg {
+        opacity: 1; }
+      header .mobile-menu.active .mobile-menu__container {
+        right: 0; }
+    header .mobile-menu .bg {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100vh;
+      background: rgba(179, 160, 147, 0.5);
+      opacity: 0;
+      transition: all .1s; }
+    header .mobile-menu__container {
+      right: -80%;
+      transition: all .2s;
+      margin-left: auto;
+      background: white;
+      position: relative;
+      padding: 15px 30px 23px;
+      display: flex;
+      flex-direction: column;
+      width: 263px;
+      height: 100vh;
+      max-height: 100vh;
+      overflow: scroll;
+      transition: all .3s; }
+      header .mobile-menu__container .item {
+        font-size: 19px;
+        font-family: "Helvetica Neue";
+        color: #8c8e96;
+        text-transform: uppercase;
+        line-height: 2.25;
+        text-align: left;
+        font-weight: 400;
+        letter-spacing: 2px;
+        display: block; }
+        header .mobile-menu__container .item[aria-expanded='true'] {
+          color: #bba294; }
+        header .mobile-menu__container .item:hover {
+          color: #bba294;
+          text-decoration: none; }
+      header .mobile-menu__container .sub-item {
+        padding-left: 11px;
+        font-size: 12px;
+        font-family: "Proxima Nova Lt";
+        color: black;
+        line-height: 2.167;
+        text-align: left;
+        display: block; }
+        header .mobile-menu__container .sub-item:hover {
+          text-decoration: none;
+          color: #bba294; }
+      header .mobile-menu__container .btn-block {
+        margin-top: auto; }
+        header .mobile-menu__container .btn-block button {
+          width: 100%; }
+      header .mobile-menu__container .close-block {
+        text-align: right; }
+        header .mobile-menu__container .close-block a {
+          color: #bba294;
+          margin-right: -15px; }
+          header .mobile-menu__container .close-block a i {
+            font-size: 1.5rem; }
+          header .mobile-menu__container .close-block a:hover {
+            text-decoration: none;
+            color: #78797c; }
+
+.mobile-menu-opened {
+  overflow: hidden; }
 
 .footer {
   background: #78797c;
