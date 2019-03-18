@@ -17,6 +17,6 @@ function closeMobileMenu(){
     },150);
 }
 
-$('.burger').on('click',openMobileMenu);
+$('.burger.d-lg-none').on('click',openMobileMenu);
 $('.mobile-menu .close-block a').on('click',closeMobileMenu)
 $('.mobile-menu .bg').on('click',closeMobileMenu)
