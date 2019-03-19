@@ -2173,11 +2173,11 @@ body {
       height: 300px;
       bottom: -1px;
       left: 0;
-      background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 6%, white 79%);
+      background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 6%, white 74%);
       /* FF3.6-15 */
-      background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 6%, white 79%);
+      background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 6%, white 74%);
       /* Chrome10-25,Safari5.1-6 */
-      background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 6%, white 79%);
+      background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 6%, white 74%);
       /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */ }
     @media (max-width: 1199px) {
       .text-section.promo {
