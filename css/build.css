@@ -58,7 +58,7 @@ button {
   text-align: center;
   cursor: pointer;
   letter-spacing: 2.6px;
-  transition: all .2s;
+  transition: all .4s;
   overflow: hidden;
   position: relative; }
   .btn-gray span {
@@ -72,7 +72,7 @@ button {
     top: 0;
     left: -120%;
     background: #78797c;
-    transition: all .2s;
+    transition: all .4s;
     z-index: 1;
     -webkit-clip-path: polygon(0 0, 100% 0, 84% 100%, 0% 100%);
     clip-path: polygon(0 0, 100% 0, 84% 100%, 0% 100%); }
@@ -887,7 +887,7 @@ body {
         letter-spacing: 2px; } }
 .main-slider.mobile .item {
   position: relative;
-  max-height: 450px; }
+  max-height: 475px; }
   .main-slider.mobile .item .text {
     position: absolute;
     left: 15px;
@@ -1034,18 +1034,20 @@ body {
       @media (max-width: 1199px) {
         .directions__link a:after {
           content: '';
-          background: url("/assets/arrow-down.png");
-          width: 9px;
-          height: 6px;
-          right: 0;
+          width: 7px;
+          border-top: 1.5px solid #bba294;
+          border-left: 1.5px solid #bba294;
+          height: 7px;
+          right: 5px;
           bottom: 53%;
-          position: absolute; } }
+          position: absolute;
+          transform: rotate(-135deg); } }
       .directions__link a[aria-expanded='true'] {
         color: #8c8f98; }
         .directions__link a[aria-expanded='true']:before {
           width: 100%; }
         .directions__link a[aria-expanded='true']:after {
-          transform: scale(1, -1); }
+          transform: scale(1, -1) rotate(-135deg); }
   .directions__block__promo {
     position: relative;
     margin-bottom: 53px; }
@@ -2446,7 +2448,7 @@ body {
       background: white;
       z-index: 0;
       transform: translateX(0%);
-      transition: all .5s;
+      transition: all .9s;
       -webkit-clip-path: polygon(0 0, 100% 0, 84% 100%, 0% 100%);
       clip-path: polygon(0 0, 100% 0, 84% 100%, 0% 100%); }
     .sale__item:hover {
