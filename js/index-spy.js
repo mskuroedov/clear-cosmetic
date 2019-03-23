@@ -33,48 +33,6 @@ function doContinents(item, count) {
 }
 
 
-// анимация лида
-$(document).ready(function() {
-    let delay = 300;
-    let minDelay = 200;
-    let maxDelay = 400;
-    let count = 1;
-    let elements = 21;
-
-    // база
-    $('.lid .lid__base').addClass('fallIn');
-    setTimeout(() => {
-        $('.lid .lid__base2').addClass('fallIn');
-    }, delay)
-
-    // блоки
-    delay = getRandomInt(minDelay, maxDelay);
-    var intervalLid = setTimeout(function tick() {
-        $('.lid .lid__blocks' + count).addClass('fallIn');
-
-        count++;
-        if (count <= elements) {
-            // графики ступеньками :)
-            if (count >= 7 && count <= 10) { delay = 100 }
-
-            intervalLid = setTimeout(tick, delay);
-        } else {
-            clearTimeout(intervalLid);
-        }
-    }, delay);
-
-
-    setTimeout(() => {
-        $('.lid__final').fadeIn(3000);
-        $('.profit__lid img:not(.lid__final)').fadeOut(3000);
-
-        setTimeout(() => {
-            $('.profit__lid img:not(.lid__final)').remove();
-        }, 3200)
-    }, maxDelay * (elements - 1));
-});
-
-
 // Варианты монетизации
 $('.monetization .section__title').viewportChecker({
     classToAdd: 'fadeIn',
