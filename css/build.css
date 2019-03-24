@@ -182,7 +182,8 @@ button {
     text-transform: uppercase;
     margin-right: 26px;
     position: relative;
-    letter-spacing: 0.6px; }
+    letter-spacing: 0.6px;
+    z-index: 5; }
     .breadcrumbs__item:after {
       content: '';
       height: 5px;
