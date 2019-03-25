@@ -2,7 +2,7 @@ $('.feedback').viewportChecker({
     classToAdd: '',
     offset: 0,
     callbackFunction: function(elem, action) {
-        let step = 300;
+        let step = 500;
         let eq = 0;
         let length = $(elem).find('.blog__tile').length;
         console.log(length)

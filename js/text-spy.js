@@ -2,7 +2,7 @@ $('.animated-tiles.owl-carousel').viewportChecker({
     classToAdd: '',
     offset: -150,
     callbackFunction: function (elem, action) {
-        let step = 300;
+        let step = 500;
         let eq = 0;
         let length = $(elem).find('.owl-item').length;
 
