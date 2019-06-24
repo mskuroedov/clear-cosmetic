@@ -1264,19 +1264,20 @@ body {
     width: 100%;
     height: 100%;
     z-index: 4;
-    overflow: hidden; }
+    overflow: hidden;
+    display: flex;
+    justify-content: center; }
     .opportunities__bg img {
       opacity: 0;
       position: absolute;
       top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%; }
+      height: 100%;
+      margin: auto;
+      width: auto; }
       @media (max-width: 1199px) {
         .opportunities__bg img {
           width: auto;
           right: 0;
-          left: -30%;
           margin: auto; } }
       .opportunities__bg img.fadeIn {
         animation: fadeIn .4s forwards;
@@ -2692,7 +2693,7 @@ body {
 
 .recomendations {
   border: 1px solid #bba294;
-  padding: 61px 57px;
+  padding: 61px 57px 45px;
   margin-bottom: 70px; }
   @media (max-width: 1199px) {
     .recomendations {

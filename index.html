@@ -28,21 +28,21 @@
 <header>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-12 px-0">
+            <div class="col-12 px-0" id="main-nav">
                 <div class="container">
                     <div class="row">
                         <div class="col-12">
-                            <div class="header-content justify-content-lg-end">
-                                <a href="#" class="logo d-lg-none">
+                            <div class="header-content justify-content-xl-end">
+                                <a href="#" class="logo d-xl-none">
                                     <img src="./assets/logo.png" alt="">
                                 </a>
-                                <a class="link-w-icon geo mr-3 d-none d-lg-block">
+                                <a class="link-w-icon geo mr-3 d-none d-xl-block">
                                     г. Нижневартовск, ул. Ленина, 28
                                 </a>
-                                <a href="#" class="link-w-icon phone ml-auto ml-lg-0">
+                                <a href="#" class="link-w-icon phone ml-auto ml-xl-0">
                                     +7 (3466) 47 00 57
                                 </a>
-                                <div class="social-links d-none d-lg-flex">
+                                <div class="social-links d-none d-xl-flex">
                                     <a href="#">
                                         <i class="fab fa-vk"></i>
                                     </a>
@@ -57,7 +57,7 @@
                                         <i class="fab fa-odnoklassniki"></i>
                                     </a>
                                 </div>
-                                <a href="#" class=" burger d-lg-none">
+                                <a href="#" class=" burger d-xl-none">
                                     <span></span>
                                     <span></span>
                                     <span></span>
@@ -66,8 +66,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="split d-none d-lg-block"></div>
-                <div class="container d-none d-lg-block">
+                <div class="split d-none d-xl-block"></div>
+                <div class="container d-none d-xl-block">
                     <div class="row">
                         <div class="col-12">
                             <div class="header-content h-71">
@@ -85,7 +85,7 @@
                                         о клинике</a>
                                 </div>
 
-                                <div class="nav-links ml-auto d-none d-lg-block">
+                                <div class="nav-links ml-auto d-none d-lg-block" >
                                     <a href="#" aria-expanded="false" data-toggle="collapse" data-target="#cosmetMenu">Косметология</a>
                                     <a href="#" aria-expanded="false" data-toggle="collapse" data-target="#endoMenu">эндокринология</a>
                                     <a href="#" aria-expanded="false" data-toggle="collapse" data-target="#dermMenu">дерматология</a>
@@ -103,7 +103,7 @@
                     </div>
                 </div>
                 <div class="sub-menu">
-                    <div class=" collapse" id="aboutMenu">
+                    <div class=" collapse" data-parent="#main-nav" id="aboutMenu">
                         <div class="container">
                             <div class="sub-menu__container small-menu">
                                 <a href="#">Вакансии</a>
@@ -116,7 +116,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class=" collapse" id="cosmetMenu">
+                    <div class=" collapse" data-parent="#main-nav" id="cosmetMenu">
                         <div class="container">
                         <div class="sub-menu__container big-menu">
                             <div class="menu-item">
@@ -156,48 +156,7 @@
                         </div>
                         </div>
                     </div>
-                    <div class=" collapse" id="endoMenu">
-                        <div class="container">
-
-                        <div class="sub-menu__container big-menu">
-                            <div class="menu-item">
-                                <div class="title">ИНЪЕКЦИОННАЯ КОСМЕТОЛОГИЯ</div>
-                                <a href="#">Вакансии</a>
-                                <a href="#">Статьи</a>
-                                <a href="#">Новости</a>
-                                <a href="#">Прайс-лист</a>
-                                <a href="#">Для пациентов</a>
-                                <a href="#">Отзыв</a>
-                            </div>
-                            <div class="menu-item">
-
-                                <div class="title">АППАРАТНАЯ КОСМЕТОЛОГИЯ</div>
-                                <a href="#">Радиочастотный лифтинг</a>
-                                <a href="#">Лазерное омоложение «Фраксель»</a>
-                                <a href="#">Фотоомоложение</a>
-                                <a href="#">Микротоки</a>
-                            </div>
-                            <div class="menu-item">
-                                <div class="title">ИНЪЕКЦИОННАЯ КОСМЕТОЛОГИЯ</div>
-                                <a href="#">Вакансии</a>
-                                <a href="#">Статьи</a>
-                                <a href="#">Новости</a>
-                                <a href="#">Прайс-лист</a>
-                                <a href="#">Для пациентов</a>
-                                <a href="#">Отзыв</a>
-                            </div>
-                            <div class="menu-item">
-
-                                <div class="title">АППАРАТНАЯ КОСМЕТОЛОГИЯ</div>
-                                <a href="#">Радиочастотный лифтинг</a>
-                                <a href="#">Лазерное омоложение «Фраксель»</a>
-                                <a href="#">Фотоомоложение</a>
-                                <a href="#">Микротоки</a>
-                            </div>
-                        </div>
-                        </div>
-                    </div>
-                    <div class=" collapse" id="dermMenu">
+                    <div class=" collapse" data-parent="#main-nav" id="endoMenu">
                         <div class="container">
 
                         <div class="sub-menu__container big-menu">
@@ -238,7 +197,7 @@
                         </div>
                         </div>
                     </div>
-                    <div class=" collapse" id="trihMenu">
+                    <div class=" collapse" data-parent="#main-nav" id="dermMenu">
                         <div class="container">
 
                         <div class="sub-menu__container big-menu">
@@ -279,7 +238,7 @@
                         </div>
                         </div>
                     </div>
-                    <div class=" collapse" id="probMenu">
+                    <div class=" collapse" data-parent="#main-nav" id="trihMenu">
                         <div class="container">
 
                         <div class="sub-menu__container big-menu">
@@ -320,7 +279,48 @@
                         </div>
                         </div>
                     </div>
-                    <div class=" collapse" id="moreMenu">
+                    <div class=" collapse" data-parent="#main-nav" id="probMenu">
+                        <div class="container">
+
+                        <div class="sub-menu__container big-menu">
+                            <div class="menu-item">
+                                <div class="title">ИНЪЕКЦИОННАЯ КОСМЕТОЛОГИЯ</div>
+                                <a href="#">Вакансии</a>
+                                <a href="#">Статьи</a>
+                                <a href="#">Новости</a>
+                                <a href="#">Прайс-лист</a>
+                                <a href="#">Для пациентов</a>
+                                <a href="#">Отзыв</a>
+                            </div>
+                            <div class="menu-item">
+
+                                <div class="title">АППАРАТНАЯ КОСМЕТОЛОГИЯ</div>
+                                <a href="#">Радиочастотный лифтинг</a>
+                                <a href="#">Лазерное омоложение «Фраксель»</a>
+                                <a href="#">Фотоомоложение</a>
+                                <a href="#">Микротоки</a>
+                            </div>
+                            <div class="menu-item">
+                                <div class="title">ИНЪЕКЦИОННАЯ КОСМЕТОЛОГИЯ</div>
+                                <a href="#">Вакансии</a>
+                                <a href="#">Статьи</a>
+                                <a href="#">Новости</a>
+                                <a href="#">Прайс-лист</a>
+                                <a href="#">Для пациентов</a>
+                                <a href="#">Отзыв</a>
+                            </div>
+                            <div class="menu-item">
+
+                                <div class="title">АППАРАТНАЯ КОСМЕТОЛОГИЯ</div>
+                                <a href="#">Радиочастотный лифтинг</a>
+                                <a href="#">Лазерное омоложение «Фраксель»</a>
+                                <a href="#">Фотоомоложение</a>
+                                <a href="#">Микротоки</a>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <div class=" collapse" data-parent="#main-nav" id="moreMenu">
                         <div class="container">
 
                         <div class="sub-menu__container big-menu">

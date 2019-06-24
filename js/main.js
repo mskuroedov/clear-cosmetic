@@ -1,7 +1,12 @@
 //toggling collapsed menu
 var $menuGroup = $('.sub-menu');
 $menuGroup.on('show.bs.collapse','.collapse', function() {
-    $menuGroup.find('.collapse.show').collapse('hide');
+    // $menuGroup.find('.collapse.show').collapse('hide');
+    // $menuGroup.find('.collapsing').collapse('hide');
+    // $menuGroup.find('.collapse').class='collapse';
+    // $(this).addClass('show')
+    // $menuGroup.find('.collapsing').collapse('hide');
+    // $(this).collapse('show');
 });
 //close menu on click outside
 $(document).on('click', function(event) {
