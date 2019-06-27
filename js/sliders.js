@@ -175,7 +175,7 @@ $('[s-control="partners"] .next').on('click',function () {
 var $vBlockSlider = $('.v-block-slider .owl-carousel');
 $vBlockSlider.owlCarousel({
     dots:true,
-    // margin:1,
+    margin:5,
     items:1,
     loop:true,
     dotsEach:1,
