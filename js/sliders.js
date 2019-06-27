@@ -171,3 +171,21 @@ $('[s-control="partners"] .prev').on('click',function () {
 $('[s-control="partners"] .next').on('click',function () {
     $partnersSlider.trigger('next.owl.carousel');
 });
+//videoBlockSlider
+var $vBlockSlider = $('.v-block-slider .owl-carousel');
+$vBlockSlider.owlCarousel({
+    dots:true,
+    // margin:1,
+    items:1,
+    loop:true,
+    dotsEach:1,
+    slideBy:1,
+    dotsContainer:$('[s-control="v-block"] .slider__nav__container'),
+});
+
+$('[s-control="v-block"] .prev').on('click',function () {
+    $vBlockSlider.trigger('prev.owl.carousel');
+});
+$('[s-control="v-block"] .next').on('click',function () {
+    $vBlockSlider.trigger('next.owl.carousel');
+});
